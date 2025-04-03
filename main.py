@@ -12,7 +12,7 @@ class BaggageCalculator(QWidget):
         super().__init__()
         self.setWindowTitle("Калькулятор стоимости багажа")
         self.setGeometry(200, 100, 500, 400)
-        self.setWindowIcon(QIcon("assets/icon.png"))
+        self.setWindowIcon(QIcon("assets/ARlogo.ico"))
         self.conn = sqlite3.connect('database.db')
         self.dynamic_checkboxes = []
         self.init_ui()
@@ -23,7 +23,7 @@ class BaggageCalculator(QWidget):
         
         # Логотип
         self.logo = QLabel(self)
-        pixmap = QPixmap("assets/logo.png").scaled(200, 100, Qt.AspectRatioMode.KeepAspectRatio)
+        pixmap = QPixmap("assets/BaggageCost.png").scaled(1000, 500, Qt.AspectRatioMode.KeepAspectRatio)
         self.logo.setPixmap(pixmap)
         self.logo.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(self.logo)
